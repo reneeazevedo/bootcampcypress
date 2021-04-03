@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2021-04-03T20:03:48.788Z",
-    "end": "2021-04-03T20:04:03.447Z",
-    "duration": 14659,
+    "start": "2021-04-03T20:12:24.844Z",
+    "end": "2021-04-03T20:12:37.229Z",
+    "duration": 12385,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6f9515e6-87db-4735-8d17-eab5dbf852b7",
+      "uuid": "d1d2bd3a-99dc-4abd-b5ae-27d826e0614c",
       "title": "",
       "fullFile": "cypress/integration/listagem.spec.js",
       "file": "cypress/integration/listagem.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "eef5e22d-385c-422c-b429-cf05fa1e63f4",
+          "uuid": "7996877c-4f68-4f65-8e03-d5224446de9e",
           "title": "Listagem",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Listagem sem registros",
               "fullTitle": "Listagem Listagem sem registros",
               "timedOut": null,
-              "duration": 10634,
+              "duration": 9043,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.server();\ncy.route({\n  method: 'GET',\n  url: '**/api/1/databases/userdetails/collections/newtable?**',\n  status: 200,\n  response: []\n}).as('getNewtable');\ncy.visit('WebTable.html');\ncy.get('div[role=row]').should('have.length', 1);",
               "err": {},
-              "uuid": "8b02196c-15e7-49f3-821d-f7bb524ccc62",
-              "parentUUID": "eef5e22d-385c-422c-b429-cf05fa1e63f4",
+              "uuid": "b1a230e1-0898-4fbb-b404-45cee92d237d",
+              "parentUUID": "7996877c-4f68-4f65-8e03-d5224446de9e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Listagem apenas um registro",
               "fullTitle": "Listagem Listagem apenas um registro",
               "timedOut": null,
-              "duration": 3753,
+              "duration": 2858,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.server();\ncy.route({\n  method: 'GET',\n  url: '**/api/1/databases/userdetails/collections/newtable?**',\n  status: 200,\n  response: 'fx:webtable-get-only'\n}).as('getNewtable');\ncy.visit('WebTable.html');\ncy.get('div[role=row] div[role=gridcell]').eq(4).find('div').as('gridCellPhone');\ncy.get('@gridCellPhone').should('contain.text', '3129876543');",
               "err": {},
-              "uuid": "058b7db3-29a1-48b5-9139-dda751317904",
-              "parentUUID": "eef5e22d-385c-422c-b429-cf05fa1e63f4",
+              "uuid": "c012a9b1-ae6a-497f-ba3f-5d91fc9bbd1c",
+              "parentUUID": "7996877c-4f68-4f65-8e03-d5224446de9e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8b02196c-15e7-49f3-821d-f7bb524ccc62",
-            "058b7db3-29a1-48b5-9139-dda751317904"
+            "b1a230e1-0898-4fbb-b404-45cee92d237d",
+            "c012a9b1-ae6a-497f-ba3f-5d91fc9bbd1c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14387,
+          "duration": 11901,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
